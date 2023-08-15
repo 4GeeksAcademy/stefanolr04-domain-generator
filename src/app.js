@@ -1,11 +1,16 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
+let pronouns = ["the", "our", "my", "your", "his"];
+let adjectives = ["great", "big", "small", "tall", "ugly"];
+let nouns = ["jogger", "racoon", "cat", "person", "alien"];
+let extensions = [".es", ".com", ".net", ".org"];
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
-
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
+for (let i = 0; i < pronouns.length; i++) {
+  for (const adj of adjectives) {
+    nouns.forEach(nouns => {
+      for (const ext in extensions) {
+        console.log(
+          pronouns[i] + " " + adj + " " + nouns + " " + extensions[ext]
+        );
+      }
+    });
+  }
+}
